@@ -1,0 +1,95 @@
+$colour_primary: #9356DC ;
+$colour_secondary: #FF79DA ;
+$colour_third: #99E2D0 ;
+$white_background: #dfdfdf ;
+$grey_background: #d8d8d8 ;
+$color_black: #272727;
+$shadow: #424242;
+
+@keyframes checkanim_translation {
+    from {
+        transform: translateX(15px) ;
+        width: 50px;
+
+    }
+    to {
+
+        transform: translateX(0px);
+        width: 130px;
+     
+    }
+
+
+}
+
+
+
+
+
+
+#image_presentation
+{
+
+    img
+    {
+
+    width: 100%;
+    height: 500px;
+    object-position: 40% 100%;
+
+    }
+
+
+}
+
+
+#zone_de_commande
+{
+
+    #entete
+    {
+
+    gap: 50%;
+    
+
+
+    }
+
+
+    #centrage_bouton
+    {
+
+
+    #boutton_commander
+    {
+
+    
+    font-size: 22px;
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px $shadow;
+        
+        &:hover
+        {
+
+        background-color: $colour_secondary;
+        box-shadow: 10px 10px 25px $color_black;
+        
+
+        }
+    
+
+    }
+
+
+
+}
+
+
+
+
+
+}
+
+

@@ -50,7 +50,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #d8d8d8;
+  background-color: #eaeaea;
   z-index: -1;
   padding: 10px 0px 10px 0px;
 }
@@ -70,9 +70,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  margin: 20px auto 20px auto;
+  width: 100%;
+  margin: 0px auto 0px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
   gap: 20px;
+  background: #f6f6f6;
 }
 
 #section_explorer h1 {
@@ -98,10 +101,14 @@ header {
   border: 0px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 1px 1px 5px #424242;
+          box-shadow: 1px 1px 5px #424242;
 }
 
 #section_explorer button:hover {
-  background: #9356DC;
+  background: #FF79DA;
+  -webkit-box-shadow: 1px 1px 20px #424242;
+          box-shadow: 1px 1px 20px #424242;
 }
 
 #section_explorer button a {
@@ -157,16 +164,26 @@ header {
   margin: 10px 0px 10px 0px;
 }
 
-#section_fonctionnement ul li .numero_fonctionnement {
-  font-size: 10px;
+#section_fonctionnement ul li .flex_numero {
   border: 0px black;
   background-color: #9356DC;
   padding: 2px 5px 2px 5px;
-  border-radius: 30px;
-  color: white;
+  border-radius: 40px;
+  width: 10px;
+  height: 15px;
 }
 
-#section_fonctionnement ul li div {
+#section_fonctionnement ul li .flex_numero .numero_fonctionnement {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 1px;
+}
+
+#section_fonctionnement ul li .case_choisissez_restaurant {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,7 +196,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #dfdfdf;
+  background-color: #f6f6f6;
   padding: 20px 0px 20px 20px;
   margin-left: -30px;
   border-radius: 20px;
@@ -188,7 +205,11 @@ header {
           box-shadow: 0px 3px 20px #424242;
 }
 
-#section_fonctionnement ul li div p, #section_fonctionnement ul li div i {
+#section_fonctionnement ul li .case_choisissez_restaurant:hover {
+  background-color: #f5edff;
+}
+
+#section_fonctionnement ul li .case_choisissez_restaurant p, #section_fonctionnement ul li .case_choisissez_restaurant i {
   font-size: 15px;
 }
 
@@ -200,9 +221,15 @@ header {
   color: #9356DC;
 }
 
+.coeur_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #section_restaurant {
   width: 100%;
-  background-color: #d8d8d8;
+  background-color: #eaeaea;
   padding-bottom: 30px;
 }
 
@@ -315,15 +342,54 @@ header {
 }
 
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption i {
-  color: white;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: black;
 }
 
-#section_restaurant #background_aide #restau_flex_aide .carte figure figcaption i:hover {
-  color: linear-gradient(#9356DC, #FF79DA);
+#section_restaurant #background_aide #restau_flex_aide .carte figure .coeur_solid {
+  cursor: pointer;
+  position: absolute;
 }
 
-#section_restaurant #background_aide #restau_flex_aide .carte figure .texte_nouveau {
+#section_restaurant #background_aide #restau_flex_aide .carte figure .coeur_solid:hover i {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  visibility: visible;
+  left: 2px;
+  -webkit-animation: coeur_anim 2s;
+          animation: coeur_anim 2s;
+}
+
+#section_restaurant #background_aide #restau_flex_aide .carte figure .coeur_solid i {
+  color: #272727;
+  visibility: hidden;
+}
+
+@-webkit-keyframes coeur_anim {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes coeur_anim {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#section_restaurant #background_aide #restau_flex_aide .carte .texte_nouveau {
   font-size: 12px;
   position: relative;
   bottom: 200px;
