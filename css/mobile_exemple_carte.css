@@ -1,4 +1,52 @@
-@-webkit-keyframes fadein {
+@-webkit-keyframes apparition {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes apparition {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes anim_carte_apparition_1 {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes anim_carte_apparition_1 {
+  from {
+    opacity: 0.5;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes anim_carte_apparition_2 {
   from {
     opacity: 0;
     -webkit-transform: translateY(50px);
@@ -11,7 +59,7 @@
   }
 }
 
-@keyframes fadein {
+@keyframes anim_carte_apparition_2 {
   from {
     opacity: 0;
     -webkit-transform: translateY(50px);
@@ -24,51 +72,25 @@
   }
 }
 
-@-webkit-keyframes checkanim_translation {
+@-webkit-keyframes coeur_anim {
   from {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-    width: 50px;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    width: 150px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes checkanim_translation {
+@keyframes coeur_anim {
   from {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-    width: 50px;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    width: 150px;
-  }
-}
-
-@-webkit-keyframes checkanim_rotation {
-  from {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-  to {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
-
-@keyframes checkanim_rotation {
-  from {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-  to {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -78,7 +100,7 @@ body {
 }
 
 p, i, h1, h2, h3, h4, h5, h6 {
-  font-size: 20px;
+  font-size: 25px;
   padding: 0px;
   margin: 0px;
   font-family: 'Roboto', sans-serif;
@@ -206,40 +228,23 @@ header {
   visibility: hidden;
 }
 
-@-webkit-keyframes coeur_anim {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes coeur_anim {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 #zone_de_commande #entete .coeur_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#zone_de_commande #entete #flex_aide_zone .flex_carte {
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
+#zone_de_commande .mini_carte_recette_1 {
+  -webkit-animation: anim_carte_apparition_1 2s;
+          animation: anim_carte_apparition_1 2s;
 }
 
-#zone_de_commande .mini_carte_recette {
+#zone_de_commande .mini_carte_recette_2 {
+  -webkit-animation: anim_carte_apparition_2 2s;
+          animation: anim_carte_apparition_2 2s;
+}
+
+#zone_de_commande .mini_carte_recette, #zone_de_commande .mini_carte_recette_2, #zone_de_commande .mini_carte_recette_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,21 +269,29 @@ header {
   overflow: hidden;
 }
 
-#zone_de_commande .mini_carte_recette:hover #flex_cacher_macaron {
-  -webkit-animation: checkanim_translation 2s 1 forwards;
-          animation: checkanim_translation 2s 1 forwards;
+#zone_de_commande .mini_carte_recette:hover .espace_cacher, #zone_de_commande .mini_carte_recette_2:hover .espace_cacher, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher {
+  -webkit-transition: margin-right 2s cubic-bezier(0.53, 0.82, 0.29, 0.95) 0s;
+  transition: margin-right 2s cubic-bezier(0.53, 0.82, 0.29, 0.95) 0s;
+  margin-right: 0px;
 }
 
-#zone_de_commande .mini_carte_recette:hover #flex_cacher_macaron div i {
-  -webkit-animation: checkanim_rotation 2s 1 forwards;
-          animation: checkanim_rotation 2s 1 forwards;
+#zone_de_commande .mini_carte_recette:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_2:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher i {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte {
+#zone_de_commande .mini_carte_recette .texte_mini_carte, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 15px;
   z-index: 30;
   gap: 5px;
@@ -286,24 +299,24 @@ header {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte h3 {
-  font-size: 18px;
+#zone_de_commande .mini_carte_recette .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h3 {
+  font-size: 20px;
   font-weight: 600;
   text-overflow: ellipsis;
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte h4 {
-  font-size: 16px;
+#zone_de_commande .mini_carte_recette .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h4 {
+  font-size: 18px;
   font-weight: 100;
   text-overflow: ellipsis;
 }
 
-#zone_de_commande .mini_carte_recette p {
+#zone_de_commande .mini_carte_recette p, #zone_de_commande .mini_carte_recette_2 p, #zone_de_commande .mini_carte_recette_1 p {
   position: relative;
   font-weight: 600;
   font-size: 18px;
@@ -323,20 +336,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  left: 50px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   background-color: #99E2D0;
-  height: 120px;
-  width: 90px;
-  margin: auto;
+  height: 50px;
+  width: 50px;
+  margin-right: -100px;
 }
 
 #zone_de_commande .espace_cacher i {
-  margin-top: 40px;
-  margin-left: 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -359,7 +365,7 @@ header {
   height: 50px;
   border-radius: 30px;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
   -webkit-box-shadow: 1px 1px 10px #424242;
           box-shadow: 1px 1px 10px #424242;
@@ -403,7 +409,7 @@ footer #dimension_footer {
 footer #dimension_footer h1 {
   font-family: 'Shrikhand' , sans-serif;
   color: white;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 100;
 }
 
@@ -424,7 +430,7 @@ footer #dimension_footer a {
 }
 
 footer #dimension_footer a i, footer #dimension_footer a h5 {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 footer #dimension_footer a .footer_aide_flex {

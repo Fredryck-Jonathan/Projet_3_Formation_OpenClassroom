@@ -210,7 +210,7 @@ header {
 }
 
 #section_fonctionnement ul li .case_choisissez_restaurant p, #section_fonctionnement ul li .case_choisissez_restaurant i {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #section_fonctionnement ul li i {
@@ -333,7 +333,7 @@ header {
 
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption div a h3 {
   color: black;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption div h4 {
@@ -390,7 +390,7 @@ header {
 }
 
 #section_restaurant #background_aide #restau_flex_aide .carte .texte_nouveau {
-  font-size: 12px;
+  font-size: 15px;
   position: relative;
   bottom: 200px;
   left: 90px;
@@ -446,7 +446,7 @@ footer #dimension_footer a {
 }
 
 footer #dimension_footer a i, footer #dimension_footer a h5 {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 footer #dimension_footer a .footer_aide_flex {

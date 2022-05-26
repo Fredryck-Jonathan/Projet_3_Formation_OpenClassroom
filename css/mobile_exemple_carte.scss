@@ -8,45 +8,64 @@ $grey_background: #d8d8d8 ;
 $color_black: #272727;
 $shadow: #424242;
 
-@keyframes fadein {
+@keyframes apparition {
     from {
-        opacity:0;
-        transform:translateY(50px) ;
+        transform: translateY(50px) ;
     }
     to {
-        opacity:1;
-        transform:translateY(0px) ;
+        transform: translateY(0px) ;
     }
 }
 
-@keyframes checkanim_translation {
-    from {
-        transform: translateX(15px) ;
-        width: 50px;
+
+
+
+
+
+@keyframes anim_carte_apparition_1 {
+    from{
+        
+        opacity: 0.5;
+        transform: translateY(50px) 
+       
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0px) 
+        
 
     }
-    to {
+}
 
-        transform: translateX(0px);
-        width: 150px;
-     
+@keyframes anim_carte_apparition_2 {
+    from{
+        opacity: 0;
+        transform: translateY(50px) 
+        
     }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0px) 
+        
 
-
+    }
 }
 
 
-@keyframes checkanim_rotation {
-    from {
-        transform: rotateZ(180deg) ;
+@keyframes coeur_anim {
+    from{
 
-    }
-    to {
-
-        transform: rotateZ(360deg) ;
+    transform: scale(0);        
     }
 
+    to{
+    
+    transform: scale(1);
 
+    }
+    
 }
 
 
@@ -62,7 +81,7 @@ padding: 0px;
 
 p , i , h1 , h2 , h3 , h4 , h5 , h6  {
 
-    font-size: 20px;
+    font-size: 25px;
     padding: 0px;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
@@ -217,19 +236,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
                
             }
 
-            @keyframes coeur_anim {
-                from{
             
-                transform: scale(0);        
-                }
-            
-                to{
-                
-                transform: scale(1);
-            
-                }
-                
-            }
 
 
             }
@@ -245,30 +252,31 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
 
 
 
-        #flex_aide_zone
-        {
-
-        .flex_carte
-        {
-
-        animation: fadein 2s;
 
 
+    
+       
 
-        }
+    }
 
+    .mini_carte_recette_1
+    {
+    
+    animation: anim_carte_apparition_1 2s ;
 
+    }
 
-        }
+    .mini_carte_recette_2
+    {
+
+    animation: anim_carte_apparition_2 2s ;
 
     }
 
 
 
-
-
     
-        .mini_carte_recette
+        .mini_carte_recette, .mini_carte_recette_2, .mini_carte_recette_1
         {
 
         display: flex;
@@ -287,31 +295,29 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             &:hover
             {
 
-            #flex_cacher_macaron
+
+            .espace_cacher
             {
 
-            animation: checkanim_translation 2s 1 forwards;
+            transition: transform 2s;
+            transform: margin-right: 0px;
+           
 
-                div
-                {
 
-                    i
-                    {
+            i
+            {
 
-                    animation: checkanim_rotation 2s 1 forwards;
-                    
-                    }
-
-                }
+            transition: transform 2s ;
+            transform: rotate(360deg);
 
             }
 
-
-            
+            }
 
             }
     
 
+        
 
             .texte_mini_carte
             {
@@ -326,15 +332,18 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             display: inline-block;
             overflow: hidden;
             text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; // max nb lines to show
-            -webkit-box-orient: vertical;
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            
+
+            
     
 
 
                 h3
                 {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 600;
                 text-overflow: ellipsis;
                 
@@ -343,7 +352,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
 
                 h4
                 {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 100;
                 text-overflow: ellipsis;
                 
@@ -383,18 +392,14 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
     {
     
     align-items: center;
-    position: absolute;
-    left: 50px;
-    align-self: center;
     background-color: $colour_third;
-    height: 120px;
-    width: 90px;
-    margin:auto;
+    height: 50px;
+    width: 50px;
+    transform: margin-right: -100px;
+
     
         i
         {
-        margin-top: 40px;
-        margin-left: 25px;
         
         align-items: center;
         color: white;
@@ -425,7 +430,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
         border-radius: 30px;
       
         color: white;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 400;
 
         box-shadow: 1px 1px 10px $shadow;
@@ -488,7 +493,7 @@ background-color: $color_black;
 
         font-family: 'Shrikhand' , sans-serif;
         color: white;
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 100;
 
 
@@ -514,7 +519,7 @@ background-color: $color_black;
         i , h5
         {
 
-        font-size: 10px;
+        font-size: 14px;
 
         }
     
