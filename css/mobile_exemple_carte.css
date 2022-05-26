@@ -262,7 +262,6 @@ header {
   margin-bottom: 30px;
   width: 90%;
   background-color: white;
-  padding: 20px 0px 20px 0px;
   border-radius: 20px;
   -webkit-box-shadow: 1px 1px 10px #424242;
           box-shadow: 1px 1px 10px #424242;
@@ -270,8 +269,8 @@ header {
 }
 
 #zone_de_commande .mini_carte_recette:hover .espace_cacher, #zone_de_commande .mini_carte_recette_2:hover .espace_cacher, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher {
-  -webkit-transition: margin-right 2s cubic-bezier(0.53, 0.82, 0.29, 0.95) 0s;
-  transition: margin-right 2s cubic-bezier(0.53, 0.82, 0.29, 0.95) 0s;
+  -webkit-transition: margin-right 500ms linear;
+  transition: margin-right 500ms linear;
   margin-right: 0px;
 }
 
@@ -292,6 +291,10 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
   margin-left: 15px;
   z-index: 30;
   gap: 5px;
@@ -301,26 +304,30 @@ header {
   text-overflow: ellipsis;
   display: flex;
   flex-direction: column;
-  white-space: nowrap;
 }
 
 #zone_de_commande .mini_carte_recette .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h3 {
   font-size: 20px;
   font-weight: 600;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #zone_de_commande .mini_carte_recette .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h4 {
   font-size: 18px;
   font-weight: 100;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #zone_de_commande .mini_carte_recette p, #zone_de_commande .mini_carte_recette_2 p, #zone_de_commande .mini_carte_recette_1 p {
-  position: relative;
   font-weight: 600;
   font-size: 18px;
-  margin-right: 15px;
+  margin: auto;
+  margin-right: 0px;
+  margin-bottom: 13px;
   z-index: 45;
 }
 
@@ -337,16 +344,24 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #99E2D0;
-  height: 50px;
-  width: 50px;
-  margin-right: -100px;
+  height: 80px;
+  width: 60px;
+  margin-right: -60px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #zone_de_commande .espace_cacher i {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  margin-left: 30%;
 }
 
 #zone_de_commande #centrage_bouton {
