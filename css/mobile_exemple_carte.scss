@@ -276,7 +276,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
 
 
     
-        .mini_carte_recette, .mini_carte_recette_2, .mini_carte_recette_1
+        .mini_carte_recette_2, .mini_carte_recette_1
         {
 
         display: flex;
@@ -291,6 +291,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
         border-radius: 20px;
         box-shadow: 1px 1px 10px $shadow;
         overflow: hidden;
+        
 
             &:hover
             {
@@ -299,7 +300,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             .espace_cacher
             {
 
-            transition: margin-right 500ms linear;
+          
             margin-right: 0px;
            
 
@@ -307,7 +308,8 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             i
             {
 
-            transition: transform 2s ;
+            transition: transform ;
+            transition-duration: 1s;
             transform: rotate(360deg);
 
             }
@@ -407,7 +409,8 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
     margin-right: -60px;
     padding: 0px;
     display: flex;
-
+    transition: margin-right ease-in-out;
+    transition-duration: 1s;
     
         i
         {

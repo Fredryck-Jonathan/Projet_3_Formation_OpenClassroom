@@ -244,7 +244,7 @@ header {
           animation: anim_carte_apparition_2 2s;
 }
 
-#zone_de_commande .mini_carte_recette, #zone_de_commande .mini_carte_recette_2, #zone_de_commande .mini_carte_recette_1 {
+#zone_de_commande .mini_carte_recette_2, #zone_de_commande .mini_carte_recette_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,22 +268,22 @@ header {
   overflow: hidden;
 }
 
-#zone_de_commande .mini_carte_recette:hover .espace_cacher, #zone_de_commande .mini_carte_recette_2:hover .espace_cacher, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher {
-  -webkit-transition: margin-right 500ms linear;
-  transition: margin-right 500ms linear;
+#zone_de_commande .mini_carte_recette_2:hover .espace_cacher, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher {
   margin-right: 0px;
 }
 
-#zone_de_commande .mini_carte_recette:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_2:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher i {
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+#zone_de_commande .mini_carte_recette_2:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher i {
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte {
+#zone_de_commande .mini_carte_recette_2 .texte_mini_carte, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,7 +306,7 @@ header {
   flex-direction: column;
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h3 {
+#zone_de_commande .mini_carte_recette_2 .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h3 {
   font-size: 20px;
   font-weight: 600;
   text-overflow: ellipsis;
@@ -314,7 +314,7 @@ header {
   overflow: hidden;
 }
 
-#zone_de_commande .mini_carte_recette .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h4 {
+#zone_de_commande .mini_carte_recette_2 .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h4 {
   font-size: 18px;
   font-weight: 100;
   text-overflow: ellipsis;
@@ -322,7 +322,7 @@ header {
   overflow: hidden;
 }
 
-#zone_de_commande .mini_carte_recette p, #zone_de_commande .mini_carte_recette_2 p, #zone_de_commande .mini_carte_recette_1 p {
+#zone_de_commande .mini_carte_recette_2 p, #zone_de_commande .mini_carte_recette_1 p {
   font-weight: 600;
   font-size: 18px;
   margin: auto;
@@ -351,6 +351,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: margin-right ease-in-out;
+  transition: margin-right ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #zone_de_commande .espace_cacher i {
