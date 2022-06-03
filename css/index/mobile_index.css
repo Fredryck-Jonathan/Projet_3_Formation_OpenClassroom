@@ -26,16 +26,24 @@
   height: 110%;
   visibility: hidden;
   overflow: hidden;
-  background: #99E2D0 fixed;
+  background: rgba(153, 226, 208, 0.9) fixed;
   -webkit-animation: animation_loader 2s;
           animation: animation_loader 2s;
   z-index: 500;
-}
-
-#anim_loader_fond img {
-  position: absolute;
-  left: 42%;
-  top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
 }
 
 .lds-dual-ring {
@@ -55,9 +63,8 @@
   border-color: #FF79DA transparent #9356DC transparent;
   -webkit-animation: lds-dual-ring 1.2s linear infinite;
           animation: lds-dual-ring 1.2s linear infinite;
-  position: absolute;
-  left: 50%;
-  top: 35%;
+  margin: auto;
+  text-align: center;
 }
 
 @-webkit-keyframes lds-dual-ring {
@@ -176,6 +183,7 @@ header {
 }
 
 #section_explorer button {
+  color: white;
   font-size: 15px;
   font-weight: 500;
   padding: 15px 20px 15px 20px;
@@ -190,7 +198,8 @@ header {
 }
 
 #section_explorer button:hover {
-  background: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f895dc), to(#9356DC));
+  background: linear-gradient(#f895dc, #9356DC);
   -webkit-box-shadow: 1px 1px 20px #424242;
           box-shadow: 1px 1px 20px #424242;
 }
@@ -248,6 +257,14 @@ header {
   margin: 10px 0px 10px 0px;
 }
 
+#section_fonctionnement ul li:hover .case_choisissez_restaurant {
+  background-color: #f5edff;
+}
+
+#section_fonctionnement ul li:hover i {
+  color: #9356DC;
+}
+
 #section_fonctionnement ul li .flex_numero {
   border: 0px black;
   background-color: #9356DC;
@@ -258,7 +275,7 @@ header {
 }
 
 #section_fonctionnement ul li .flex_numero .numero_fonctionnement {
-  font-size: 10px;
+  font-size: 12px;
   color: white;
   text-align: center;
   -ms-flex-item-align: center;
@@ -289,19 +306,15 @@ header {
           box-shadow: 0px 3px 20px #424242;
 }
 
-#section_fonctionnement ul li .case_choisissez_restaurant:hover {
-  background-color: #f5edff;
+#section_fonctionnement ul li p, #section_fonctionnement ul li i {
+  font-size: 15px;
 }
 
-#section_fonctionnement ul li .case_choisissez_restaurant p, #section_fonctionnement ul li .case_choisissez_restaurant i {
-  font-size: 20px;
-}
-
-#section_fonctionnement ul li i {
+#section_fonctionnement ul i {
   color: grey;
 }
 
-#section_fonctionnement ul li #case_degustez i {
+#section_fonctionnement ul #case_degustez i {
   color: #9356DC;
 }
 
@@ -480,7 +493,7 @@ header {
   left: 90px;
   z-index: 200;
   color: darkgreen;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 4px 8px 4px 8px;
   border-radius: 2px;
   margin: auto;

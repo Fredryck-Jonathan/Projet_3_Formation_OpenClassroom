@@ -438,7 +438,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
         text-align: center;
         outline: none;
         border: 0px;
-        background: linear-gradient($colour_primary , $colour_secondary);
+        background: linear-gradient($colour_secondary, $colour_primary);
         
         margin: auto;
         height: 50px;
@@ -453,7 +453,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             &:hover
             {
 
-            background: $colour_secondary;
+            background: linear-gradient(#f895dc, $colour_primary);
             box-shadow: 5px 1px 15px $color_black;
      
 
