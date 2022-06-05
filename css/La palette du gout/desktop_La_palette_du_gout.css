@@ -1,0 +1,76 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#logo {
+  width: 20%;
+}
+
+#image_presentation {
+  display: none;
+}
+
+#zone_de_commande {
+  background: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center center no-repeat fixed;
+  background-size: cover;
+  background-color: #424242;
+  background-blend-mode: screen;
+}
+
+#zone_de_commande #flex_aide_zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+}
+
+#zone_de_commande #flex_aide_zone .flex_carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#zone_de_commande #flex_aide_zone .zone_carte {
+  width: 35%;
+}
+
+#zone_de_commande #entete {
+  position: relative;
+  margin-top: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  gap: 78%;
+  top: 0px;
+}
+
+#zone_de_commande #boutton_commander {
+  font-size: 25px;
+  width: 250px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 10px #424242;
+          box-shadow: 1px 1px 10px #424242;
+}
+
+#zone_de_commande #boutton_commander:hover {
+  background-color: #FF79DA;
+  -webkit-box-shadow: 10px 10px 25px #272727;
+          box-shadow: 10px 10px 25px #272727;
+}
+
+footer #dimension_footer h1 {
+  font-size: 17px;
+}
+
+footer #dimension_footer a i, footer #dimension_footer a h5 {
+  font-size: 15px;
+}
+/*# sourceMappingURL=desktop_La_palette_du_gout.css.map */

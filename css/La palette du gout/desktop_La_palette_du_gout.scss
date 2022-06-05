@@ -1,0 +1,155 @@
+$colour_primary: #9356DC ;
+$colour_secondary: #FF79DA ;
+$colour_third: #99E2D0 ;
+$white_background: #dfdfdf ;
+$grey_background: #d8d8d8 ;
+$color_black: #272727;
+$shadow: #424242;
+
+body
+{
+
+    
+    height: 100%;
+    width: 100%;
+
+}
+
+#logo
+{
+
+width: 20%;
+
+}
+
+#image_presentation
+{
+
+    
+
+    display: none;
+
+
+
+
+
+}
+
+
+#zone_de_commande
+{
+  
+    background: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center center no-repeat  fixed;
+    background-size: cover;
+    background-color: $shadow;
+        background-blend-mode: screen;
+
+
+
+        #flex_aide_zone
+        {
+
+    
+
+      
+        display:flex;
+        flex-direction: row;
+        margin: auto;
+
+        .flex_carte
+        {
+
+        display: flex;
+        flex-direction: column;
+
+        
+
+        }
+
+        .zone_carte
+        {
+
+        width: 35%;
+
+        }
+
+
+
+    }
+
+
+    #entete
+    {
+
+       
+       
+        position:relative;
+        margin-top: 0px;
+        background-color: rgba($color: #000000, $alpha: 0);
+        gap: 78%;
+        top: 0px;
+
+    }
+
+
+    #boutton_commander
+    {
+
+    
+    font-size: 25px;
+    width: 250px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px $shadow;
+    
+        
+        &:hover
+        {
+
+        background-color: $colour_secondary;
+        box-shadow: 10px 10px 25px $color_black;
+        
+
+        }
+    
+
+    }
+
+
+}
+
+
+footer
+{
+
+
+
+    #dimension_footer
+    {
+
+    h1
+    {
+
+    font-size: 17px;
+
+    }
+    
+
+        a
+        {
+
+
+
+
+            i , h5
+            {
+
+            font-size: 15px;
+
+            }
+
+        }       
+
+    }
+
+}

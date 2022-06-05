@@ -1,0 +1,660 @@
+
+
+
+$colour_primary: #9356DC ;
+$colour_secondary: #FF79DA ;
+$colour_third: rgb(153, 226, 208) ;
+$white_background: #f6f6f6 ;
+$grey_background: #eaeaea ;
+$color_black: #272727;
+$shadow: #424242;
+$violet_background: #f5edff;
+
+@keyframes animation_loader {
+    from{
+    
+     visibility: visible;
+    overflow-y: hidden;
+
+
+
+    }
+
+    to{
+
+    visibility: hidden;
+        overflow-y: visible;
+
+
+    }
+    
+}
+
+
+#anim_loader_fond
+{
+    position: fixed;
+    width: 100%;
+    height: 110%;
+    visibility: hidden;
+    overflow: hidden;
+    background: rgba(153, 226, 208, 0.9) fixed ;
+    animation: animation_loader 2s;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: $colour_secondary transparent $colour_primary transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    margin: auto;
+    text-align: center;
+    
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+body
+{
+
+margin: 0px;
+padding: 0px;
+
+
+}
+
+
+
+p , i , h1 , h2 , h3 , h4 , h5  {
+
+font-size: 20px;
+padding: 0px;
+margin: 0px;
+font-family: 'Roboto', sans-serif;
+}
+
+
+
+header
+{
+
+display: flex;
+flex-direction: column;
+
+}
+
+#entete_logo
+{
+    width: 100%;
+    box-shadow: 0 5px 5px $shadow;
+    padding: 20px 0px 20px 0px;
+}
+
+#logo 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:white;
+    width: 40%;
+
+
+}
+
+#location
+{
+
+display: flex;
+flex-direction: row ;
+align-items: baseline;
+gap: 15px;
+justify-content: center;
+background-color: $grey_background;
+z-index: -1;
+padding: 10px 0px 10px 0px;
+
+    i , p 
+    {
+
+    font-size: 15px;
+
+
+    }
+
+}
+
+
+#section_explorer
+{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+margin: 0px auto 0px auto;
+padding-top: 40px;
+padding-bottom: 40px;
+gap: 20px;
+background: $white_background;
+
+    h1
+    {
+    font-size: 22px;
+    text-align: center;
+    width: 40%;
+
+    }
+
+
+    h2
+    {
+
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    width: 50%;
+    }
+
+    button
+    {
+
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 20px 15px 20px;
+    border-radius: 50px;
+    text-decoration: none ;
+    outline: none;
+    border: 0px;
+    background: linear-gradient($colour_secondary, $colour_primary);
+    box-shadow: 1px 1px 5px $shadow;
+    
+        &:hover
+        {
+
+        background: linear-gradient(#f895dc, $colour_primary);
+
+        
+        box-shadow: 1px 1px 20px $shadow;
+
+        }
+        
+
+
+
+        a
+        {
+
+        text-decoration: none;
+        color: white;
+
+        }
+
+    }
+
+}
+
+
+#section_fonctionnement
+{
+
+width: 95%;
+margin: auto;
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+    ul
+    {
+    width: 100%;
+    margin: auto;
+    display:  flex ;
+    flex-direction: column;
+    padding: 0px;
+    gap: 10px;
+
+        li
+        {
+        
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
+        margin: 10px 0px 10px 0px;
+
+        &:hover
+        {
+       
+        .case_choisissez_restaurant
+        {
+        
+
+            background-color: $violet_background;
+
+        }
+
+
+        i
+        {
+
+        color: $colour_primary;
+
+        }
+
+    
+        }
+       
+
+        .flex_numero
+        {
+        
+        border: 0px black;
+        background-color: $colour_primary ;
+        padding: 2px 5px 2px 5px;
+        border-radius: 40px;
+        width: 10px;
+        height: 15px;
+        
+            .numero_fonctionnement
+            {
+            font-size: 12px;
+            color: white;
+                text-align: center;
+                align-self: center;
+                margin-top: 1px;
+            }
+
+        }
+
+        .case_choisissez_restaurant
+        {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        background-color: $white_background;
+        padding: 20px 0px 20px 20px;
+        margin-left: -30px;
+        border-radius: 20px;
+        z-index: -1;
+        box-shadow: 0px 3px 20px $shadow;
+
+        
+
+
+        }
+
+            p , i 
+            {
+
+            font-size: 15px;
+
+            }
+
+        }
+ 
+        
+            
+            
+        i
+        {
+
+        color: grey;
+
+        }
+
+        
+        #case_degustez
+        {
+
+            i
+            {
+            
+            color: $colour_primary;
+
+            }
+
+        }
+
+        
+
+       
+
+
+        }
+
+
+    }
+
+
+
+.coeur_flex
+{
+
+display: flex;
+
+
+
+
+}
+
+#section_restaurant
+{
+width: 100%;
+background-color: $grey_background;
+padding-bottom: 30px;
+
+h2
+{
+
+padding: 15px 0px 0px 0px;
+
+}
+
+#background_aide
+{
+    
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto auto auto;
+
+  
+#restau_flex_aide
+{
+
+
+ 
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+
+
+
+
+    .carte
+    {
+    
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px $shadow;
+    
+
+    figure {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+       
+
+        img
+        {
+            width: 100%;
+            height: 160px;
+            object-fit: cover ;
+            border-radius: 20px 20px 0px 0px;
+           
+
+        }
+
+        figcaption
+        {
+        
+        width: 100%;
+        height: 70px ;
+
+        margin: auto;
+        margin-top: -5px;
+
+  
+        background-color: white;
+           
+        border-radius: 0px 0px 20px 20px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around ;
+        align-items: center;
+        gap: 70px;
+        box-shadow: 1px 5px 10px $shadow;
+        
+            div
+            {
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+             
+
+                a
+                {
+            
+                text-decoration: none;    
+            
+                    h3
+                    {
+
+                    color: black;
+                    font-size: 24px;
+            
+                    }
+
+
+
+                }
+
+                h4
+                {
+
+                font-size: 16px;
+                font-weight: 100;
+
+                }
+
+
+            }
+            
+         
+            i
+            {
+                
+                color: black;
+                
+                
+
+            }
+            
+            }
+
+            .coeur_solid
+            {
+            cursor: pointer;
+            position: absolute;
+           
+
+
+            &:hover i
+            {
+                
+                color: transparent;
+                background:linear-gradient($colour_primary, $colour_secondary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                visibility: visible;
+                left: 2px;
+                animation: coeur_anim 2s;
+                
+        
+            }
+    
+            
+                i
+                {
+        
+                color: $color_black;
+                visibility: hidden;
+
+               
+                }
+            }
+        
+        }
+
+
+@keyframes coeur_anim {
+    from{
+
+    transform: scale(0);        
+    }
+
+    to{
+    
+    transform: scale(1);
+
+    }
+    
+}
+
+
+
+        .texte_nouveau
+        {
+
+        font-size: 15px;
+        position: relative;
+        bottom: 200px;
+        left: 90px;
+        z-index: 200;
+        color: darkgreen;
+        background-color: $colour_third;
+        padding: 4px 8px 4px 8px;
+        border-radius: 2px;
+        margin: auto;
+        }
+    }
+
+    }
+}
+}
+
+
+
+
+
+
+footer
+{
+
+padding-top: 5px;
+padding-bottom: 20px;
+background-color: $color_black;
+
+    #dimension_footer
+    {
+
+    width: 90%;
+    margin: auto;
+    margin-top: 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+        h1
+        {
+
+        font-family: 'Shrikhand' , sans-serif;
+        color: white;
+        font-size: 11px;
+        font-weight: 100;
+
+
+        }
+
+
+        #lien_footer
+        {
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        }
+
+
+        a
+        {
+        
+        text-decoration: none;
+        color: white;
+        
+        i , h5
+        {
+
+        font-size: 15px;
+
+        }
+    
+            .footer_aide_flex
+            {
+
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+              
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,61 @@
+#logo {
+  width: 20%;
+}
+
+#location i, #location p {
+  font-size: 20px;
+}
+
+#section_explorer h1 {
+  font-size: 28px;
+}
+
+#section_explorer h2 {
+  font-size: 20px;
+}
+
+#section_explorer button {
+  font-size: 20px;
+}
+
+#section_fonctionnement {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section_fonctionnement ul {
+  margin-left: 0px;
+  width: 50%;
+}
+
+#section_fonctionnement ul li {
+  width: 50%;
+}
+
+#section_restaurant #background_aide #restau_flex_aide {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#section_restaurant #background_aide #restau_flex_aide .carte {
+  width: 22%;
+  margin: auto;
+}
+
+footer #dimension_footer h1 {
+  font-size: 16px;
+}
+
+footer #dimension_footer a i, footer #dimension_footer a h5 {
+  font-size: 13px;
+}
+/*# sourceMappingURL=desktop_index.css.map */
