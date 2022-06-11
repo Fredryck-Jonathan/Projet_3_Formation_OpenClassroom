@@ -94,6 +94,50 @@
   }
 }
 
+@-webkit-keyframes animation_loader {
+  from {
+    visibility: visible;
+    overflow-y: hidden;
+  }
+  to {
+    visibility: hidden;
+    overflow-y: visible;
+  }
+}
+
+@keyframes animation_loader {
+  from {
+    visibility: visible;
+    overflow-y: hidden;
+  }
+  to {
+    visibility: hidden;
+    overflow-y: visible;
+  }
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -165,7 +209,7 @@ header {
 }
 
 #zone_de_commande {
-  background-color: #dfdfdf;
+  background-color: #f6f6f6;
   z-index: 500;
   padding-bottom: 10px;
   position: relative;
@@ -184,7 +228,7 @@ header {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  background-color: #dfdfdf;
+  background-color: #f6f6f6;
   position: absolute;
   padding-top: 30px;
   margin-top: -30px;
@@ -196,7 +240,7 @@ header {
   padding-bottom: 30px;
 }
 
-#zone_de_commande #entete h2 {
+#zone_de_commande #entete h1 {
   font-family: 'Shrikhand' , sans-serif;
   font-weight: 100;
   font-size: 30px;
@@ -398,7 +442,7 @@ header {
           box-shadow: 5px 1px 15px #272727;
 }
 
-#zone_de_commande h6 {
+#zone_de_commande h2 {
   width: 90%;
   padding-bottom: 5px;
   font-weight: 500;

@@ -1,73 +1,4 @@
-
-
-$colour_primary: #9356DC ;
-$colour_secondary: #FF79DA ;
-$colour_third: #99E2D0 ;
-$white_background: #dfdfdf ;
-$grey_background: #d8d8d8 ;
-$color_black: #272727;
-$shadow: #424242;
-
-@keyframes apparition {
-    from {
-        transform: translateY(50px) ;
-    }
-    to {
-        transform: translateY(0px) ;
-    }
-}
-
-
-
-
-
-
-@keyframes anim_carte_apparition_1 {
-    from{
-        
-        opacity: 0.5;
-        transform: translateY(50px) 
-       
-    }
-    
-    to{
-        opacity: 1;
-        transform: translateY(0px) 
-        
-
-    }
-}
-
-@keyframes anim_carte_apparition_2 {
-    from{
-        opacity: 0;
-        transform: translateY(50px) 
-        
-    }
-    
-    to{
-        opacity: 1;
-        transform: translateY(0px) 
-        
-
-    }
-}
-
-
-@keyframes coeur_anim {
-    from{
-
-    transform: scale(0);        
-    }
-
-    to{
-    
-    transform: scale(1);
-
-    }
-    
-}
-
+@import 'animation_variable' ;
 
 
 body
@@ -158,7 +89,6 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
         max-height: 350px;
 
         }
-
     }
 
     #zone_de_commande
@@ -187,7 +117,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             padding-bottom: 30px;
 
 
-            h2
+            h1
             {
 
             font-family: 'Shrikhand' , sans-serif;
@@ -464,7 +394,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
 
     }
 
-    h6
+    h2
     {
 
     width: 90%;
