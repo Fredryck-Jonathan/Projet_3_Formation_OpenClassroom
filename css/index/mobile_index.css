@@ -485,11 +485,42 @@ header {
   border-radius: 20px 20px 0px 0px;
 }
 
+#section_restaurant #background_aide #restau_flex_aide .carte figure .texte_nouveau {
+  font-family: 'Roboto' , Arial;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  bottom: 140px;
+  left: 35%;
+  z-index: 200;
+  color: darkgreen;
+  background-color: #99E2D0;
+  padding: 8px 10px 8px 10px;
+  border-radius: 2px;
+  margin: auto;
+}
+
+#section_restaurant #background_aide #restau_flex_aide .carte figure .texte_nouveau_off {
+  font-family: 'Roboto' , Arial;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  bottom: 140px;
+  left: 35%;
+  z-index: 200;
+  color: darkgreen;
+  background-color: #99E2D0;
+  padding: 8px 10px 8px 10px;
+  border-radius: 2px;
+  margin: auto;
+  visibility: hidden;
+}
+
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption {
   width: 100%;
   height: 70px;
   margin: auto;
-  margin-top: -5px;
+  margin-top: -37px;
   background-color: white;
   border-radius: 0px 0px 20px 20px;
   display: -webkit-box;
@@ -526,7 +557,7 @@ header {
 
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption div a h3 {
   color: black;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 #section_restaurant #background_aide #restau_flex_aide .carte figure figcaption div h4 {
@@ -560,19 +591,6 @@ header {
   visibility: hidden;
 }
 
-#section_restaurant #background_aide #restau_flex_aide .carte .texte_nouveau {
-  font-size: 15px;
-  position: relative;
-  bottom: 200px;
-  left: 90px;
-  z-index: 200;
-  color: darkgreen;
-  background-color: #99E2D0;
-  padding: 4px 8px 4px 8px;
-  border-radius: 2px;
-  margin: auto;
-}
-
 footer {
   padding-top: 5px;
   padding-bottom: 20px;
@@ -593,7 +611,7 @@ footer #dimension_footer {
   gap: 15px;
 }
 
-footer #dimension_footer h1 {
+footer #dimension_footer h4 {
   font-family: 'Shrikhand' , sans-serif;
   color: white;
   font-size: 11px;

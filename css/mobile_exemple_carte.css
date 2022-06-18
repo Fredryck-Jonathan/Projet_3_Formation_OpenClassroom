@@ -234,7 +234,7 @@ header {
   margin-top: -30px;
   z-index: 500;
   border-radius: 40px 40px 0px 0px;
-  gap: 105px;
+  gap: 70px;
   top: -74px;
   width: 100%;
   padding-bottom: 30px;
@@ -243,7 +243,7 @@ header {
 #zone_de_commande #entete h1 {
   font-family: 'Shrikhand' , sans-serif;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 #zone_de_commande #entete i {
@@ -352,7 +352,7 @@ header {
 }
 
 #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h3, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -360,7 +360,7 @@ header {
 }
 
 #zone_de_commande .mini_carte_recette_2 .texte_mini_carte h4, #zone_de_commande .mini_carte_recette_1 .texte_mini_carte h4 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 100;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -471,7 +471,7 @@ footer #dimension_footer {
   gap: 15px;
 }
 
-footer #dimension_footer h1 {
+footer #dimension_footer h4 {
   font-family: 'Shrikhand' , sans-serif;
   color: white;
   font-size: 15px;
