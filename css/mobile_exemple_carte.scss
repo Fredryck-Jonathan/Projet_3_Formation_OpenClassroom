@@ -239,8 +239,9 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
             i
             {
 
-            transition: transform ;
-            transition-duration: 1s;
+            transition: transform ease-in-out ;
+            transition-duration: 0.55s;
+            
             transform: rotate(360deg);
 
             }
@@ -341,7 +342,7 @@ p , i , h1 , h2 , h3 , h4 , h5 , h6  {
     padding: 0px;
     display: flex;
     transition: margin-right ease-in-out;
-    transition-duration: 1s;
+    transition-duration: 0.55s;
     
         i
         {

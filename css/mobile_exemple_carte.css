@@ -318,12 +318,12 @@ header {
 }
 
 #zone_de_commande .mini_carte_recette_2:hover .espace_cacher i, #zone_de_commande .mini_carte_recette_1:hover .espace_cacher i {
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition: -webkit-transform ease-in-out;
+  transition: -webkit-transform ease-in-out;
+  transition: transform ease-in-out;
+  transition: transform ease-in-out, -webkit-transform ease-in-out;
+  -webkit-transition-duration: 0.55s;
+          transition-duration: 0.55s;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -398,8 +398,8 @@ header {
   display: flex;
   -webkit-transition: margin-right ease-in-out;
   transition: margin-right ease-in-out;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 0.55s;
+          transition-duration: 0.55s;
 }
 
 #zone_de_commande .espace_cacher i {
